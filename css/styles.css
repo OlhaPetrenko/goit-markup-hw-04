@@ -16,7 +16,9 @@
   /* Bg color */
   --primery-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
-  --background-color-hero-footer: #2f303a;
+  --background-color-footer: #2f303a;
+  --background-color-hero: #c4c4c4;
+  --icon-color: #afb1b8;
 
   /* Grid */
 }
@@ -101,11 +103,25 @@ body {
   color: var(--secondary-text-color);
 }
 
-.site-nav .link:hover,
-.contact-nav .link:hover,
-.site-nav .link:focus,
-.contact-nav .link:focus {
+.contact-nav-item {
+  align-items: center;
+}
+
+.site-nav-item .link:hover,
+.contact-nav-item .link:hover,
+.site-nav-item .link:focus,
+.contact-nav-item .link:focus {
   color: var(--accent-color);
+}
+.contact-nav-item:hover .contact-icon,
+.contact-nav-item:focus .contact-icon,
+.contact-site-item:hover .contact-icon,
+.contact-site-item:focus .contact-icon {
+  fill: var(--accent-color);
+}
+
+.contact-icon {
+  margin-right: 10px;
 }
 
 .site-nav .link.current {
@@ -117,9 +133,15 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-picture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  background-color: var(--background-color-hero-footer);
+  background-color: var(--background-color-hero);
 }
+
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -199,6 +221,13 @@ body {
   margin-right: 30px;
 }
 
+.feature-icon {
+  background-color: var(--secondary-background-color);
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+}
+
 .feature-list .title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -236,7 +265,7 @@ body {
 }
 .team-member-descr {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   text-align: center;
 }
 
@@ -261,11 +290,76 @@ body {
   background-color: var(--secondary-background-color);
 }
 
+.social-list {
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  border-radius: 50%;
+}
+
+.social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon {
+  fill: var(--icon-color);
+}
+
+.social-link:hover {
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-icon {
+  fill: var(--primery-background-color);
+}
+
+/* Постоянные клиенты */
+.client-list {
+  justify-content: center;
+}
+.client-icon {
+  fill: var(--icon-color);
+}
+
+.client-item {
+  width: 170;
+  height: 92;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  /* background-color: red; */
+}
+
+.client-item:hover .client-icon,
+.client-item:focus .client-icon {
+  fill: var(--accent-color);
+}
+.client-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--accent-color);
+}
+
 /* Футер */
 .footer {
-  background-color: var(--background-color-hero-footer);
+  background-color: var(--background-color-footer);
+}
+
+.contacts {
+  margin-right: 70px;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.social {
+  padding-top: 72px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -304,6 +398,29 @@ body {
 .footer-nav .tel:hover,
 .footer-nav .tel:focus {
   color: var(--accent-color);
+}
+.social .social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social .social-link:hover {
+  background: var(--accent-color);
+}
+.social .social-list {
+  padding-bottom: 0;
+}
+.social .social-icon {
+  fill: var(--primery-background-color);
+}
+
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primery-background-color);
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 /* Страница  Portfolio */
