@@ -1,11 +1,3 @@
-/*  основной цвет текста заголовков #212121 */
-/* вторичный цвет текста текст #757575 */
-/* акцент #2196F3 */
-/* белый #FFFFFF */
-/* студио в хедере #000000; */
-/* цвет фона основной #E5E5E5 */
-/* цвет секции Team #F5F4FA */
-
 :root {
   /* Text color */
   --primary-text-color: #212121;
@@ -107,16 +99,14 @@ body {
   align-items: center;
 }
 
-.site-nav-item .link:hover,
-.contact-nav-item .link:hover,
-.site-nav-item .link:focus,
-.contact-nav-item .link:focus {
+.site-nav-item:hover .link,
+.contact-nav-item:hover .link,
+.site-nav-item:focus .link,
+.contact-nav-item:focus .link {
   color: var(--accent-color);
 }
 .contact-nav-item:hover .contact-icon,
-.contact-nav-item:focus .contact-icon,
-.contact-site-item:hover .contact-icon,
-.contact-site-item:focus .contact-icon {
+.contact-nav-item:focus .contact-icon {
   fill: var(--accent-color);
 }
 
@@ -254,7 +244,7 @@ body {
 
 /*   Наша команда */
 .team-member-item {
-  width: 270px;
+  width: calc((100%-90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -299,7 +289,6 @@ body {
   height: 44px;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
   border-radius: 50%;
 }
 
@@ -321,24 +310,28 @@ body {
 .client-list {
   justify-content: center;
 }
-.client-icon {
-  fill: var(--icon-color);
+
+.client-list li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client-item {
-  width: 170;
-  height: 92;
+  align-items: center;
+  width: 170px;
+  height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  /* background-color: red; */
+}
+
+.client-icon {
+  fill: var(--icon-color);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .client-item:hover .client-icon,
 .client-item:focus .client-icon {
   fill: var(--accent-color);
-}
-.client-list li:not(:last-child) {
-  margin-right: 30px;
 }
 
 .client-item:hover,
@@ -476,6 +469,11 @@ body {
   margin-bottom: 30px;
 
   border: 1px solid #eeeeee;
+}
+
+.example-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-item:nth-child(3n) {
