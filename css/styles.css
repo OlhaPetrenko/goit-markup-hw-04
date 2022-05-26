@@ -79,6 +79,11 @@ img {
 
 /* Site nav */
 
+.header nav {
+  justify-content: center;
+  align-items: center;
+}
+
 .site-nav-item:not(:last-child),
 .contact-nav-item:not(:last-child) {
   margin-right: 50px;
@@ -86,9 +91,10 @@ img {
 
 .site-nav .link,
 .contact-nav .link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -104,16 +110,25 @@ img {
   align-items: center;
 }
 
-.site-nav-item:hover .link,
-.contact-nav-item:hover .link,
-.site-nav-item:focus .link,
-.contact-nav-item:focus .link {
+.site-nav-item .link:hover,
+.site-nav-item .link:focus {
   color: var(--accent-color);
 }
-.contact-nav-item:hover .contact-icon,
-.contact-nav-item:focus .contact-icon {
+
+.contact-nav-item .link:hover,
+.contact-nav-item .link:focus {
+  color: var(--accent-color);
+}
+
+.contact-nav-item .link:hover .contact-icon,
+.contact-nav-item .link:focus .contact-icon {
   fill: var(--accent-color);
 }
+
+/* .contact-nav-item:hover .contact-icon,
+.contact-nav-item:focus .contact-icon {
+  fill: var(--accent-color);
+} */
 
 .contact-icon {
   margin-right: 10px;
@@ -129,6 +144,9 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg-picture.jpg);
   background-size: cover;
@@ -221,7 +239,8 @@ img {
   background-color: var(--secondary-background-color);
   height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-list .title {
@@ -261,7 +280,7 @@ img {
 }
 .team-member-descr {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -276,7 +295,7 @@ img {
 
 .team-member .text {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   color: var(--secondary-text-color);
   font-size: 16px;
@@ -288,7 +307,7 @@ img {
 
 .social-list {
   justify-content: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 .social-link {
   width: 44px;
@@ -305,10 +324,12 @@ img {
   fill: var(--icon-color);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
-.social-link:hover .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: var(--primery-background-color);
 }
 
@@ -322,6 +343,7 @@ img {
 }
 
 .client-item {
+  justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
@@ -348,17 +370,16 @@ img {
 /* Футер */
 .footer {
   background-color: var(--background-color-footer);
-}
-
-.contacts {
-  margin-right: 70px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.social {
-  padding-top: 72px;
-  padding-bottom: 100px;
+.page-bottom {
+  align-items: center;
+}
+
+.contacts {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -463,7 +484,6 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .button.active {
