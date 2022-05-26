@@ -429,7 +429,8 @@ img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.social .social-link:hover {
+.social .social-link:hover,
+.social .social-link:focus {
   background: var(--accent-color);
 }
 .social .social-list {
